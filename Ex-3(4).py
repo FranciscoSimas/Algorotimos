@@ -3,38 +3,38 @@ from DEF import ordenar
 vendas = [
     # Gasolina
     [
-        # OR CT OC 2
+        # OR CT OC GE
         [1, 2, 3, 4],      # Verão
         [4, 5, 6, 7],      # Outono
         [7, 8, 9, 10],     # Inverno
         [10, 11, 12, 13],  # Primavera
-        [2, 3, 7, 8]       # 1
+        [2, 3, 7, 8]       # Estação Extra
     ],
     # Gasóleo
     [
-        # OR CT OC   2
+        # OR CT OC   GE
         [13, 14, 15, 16],  # Verão
         [16, 17, 18, 19],  # Outono
         [19, 20, 21, 22],  # Inverno
         [22, 23, 24, 25],  # Primavera
-        [9, 8, 1, 2]       # 1
+        [9, 8, 1, 2]       # Estação Extra
     ],
-    # JetFuel
+    # Combustivel extra
     [
-        # OR CT OC   2
+        # OR CT OC   GE
         [26, 27, 28, 29],  # Verão
         [29, 30, 31, 32],  # Outono
         [32, 33, 34, 35],  # Inverno
         [35, 36, 37, 38],  # Primavera
-        [10, 9, 4, 5]      # 1
+        [10, 9, 4, 5]      # Estação Extra
     ],
 ]
 
-grupos = ["Oriental", "Central", "Ocidental", "2"]
-tipos = ["Gasolina", "Gasoleo", "JetFuel"]
-estacoes = ["Verão", "Outono", "Inverno", "Primavera", "1"]
-vendasestacao = [0] * 5
-vendasgrupo = [0] * 4
+grupos = ["Oriental", "Central", "Ocidental", "Grupo Extra"]
+tipos = ["Gasolina", "Gasoleo", "Combustivel extra"]
+estacoes = ["Verão", "Outono", "Inverno", "Primavera", "Estação Extra"]
+vendasestacao = [0] * len(estacoes)
+vendasgrupo = [0] * len(grupos)
 casa = 0
 maior = 0
 x = y = z = 0
@@ -54,6 +54,7 @@ print("_____________________________________________________")
 print()
 
 # Total por Estação
+
 for y in range(len(vendas[x])):
     total2 = 0
     for x in range(len(vendas)):
@@ -77,6 +78,7 @@ print("_____________________________________________________")
 print()
 
 # Total por Grupo
+
 casa = 0
 total3 = 0
 menor = 0
