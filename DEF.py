@@ -1,4 +1,7 @@
 def ordenar(vendasestacao, ordem=1):
+    # Faz uma cópia da lista original
+    vendasestacao_original = vendasestacao[:]
+
     troquei = True
     while troquei:
         troquei = False
@@ -10,4 +13,6 @@ def ordenar(vendasestacao, ordem=1):
                 vendasestacao[x + 1] = c1
                 troquei = True
             x += 1
-    return vendasestacao
+
+    # Retorna a lista ordenada e a lista original
+    return vendasestacao, vendasestacao_original
