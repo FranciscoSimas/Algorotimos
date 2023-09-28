@@ -36,5 +36,3 @@ print()
 print(f"Comprimento da lista vendas = {len(vendas)}")
 print(f"Comprimento da lista vendas = {len(vendas[0])}")
 print(f"Comprimento da lista vendas = {len(vendas[0][0])}")
-
-
