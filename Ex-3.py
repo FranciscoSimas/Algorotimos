@@ -24,6 +24,9 @@ print(f"vendas[0][0][1] = {(vendas[0][0][1])}")
 print(f"vendas[1][1][1] = {(vendas[1][1][1])}")
 
 x = y = z = 0
+
+print(" __________________X, Y, Z_____________________")
+
 total1 = 0
 for x in range(len(vendas)):
     total2 = 0
@@ -37,7 +40,7 @@ for x in range(len(vendas)):
     print(f"total2 = {total2}")
 print(f"total1 = {total1}")
 
-print("X, Y, Z _______________________________________")
+print(" ___________________X, Z, Y____________________")
 
 total1 = 0
 for x in range(len(vendas)):
@@ -52,7 +55,7 @@ for x in range(len(vendas)):
     print(f"total2 = {total2}")
 print(f"total1 = {total1}")
 
-print("X, Z, Y _______________________________________")
+print(" __________________Y, X, Z_____________________")
 
 total1 = 0
 for y in range(len(vendas[0])):
@@ -67,7 +70,7 @@ for y in range(len(vendas[0])):
     print(f"total2 = {total2}")
 print(f"total1 = {total1}")
 
-print("Y, X, Z _______________________________________")
+print(" ___________________Y, Z, X____________________")
 
 total1 = 0
 for y in range(len(vendas[0])):
@@ -82,7 +85,7 @@ for y in range(len(vendas[0])):
     print(f"total2 = {total2}")
 print(f"total1 = {total1}")
 
-print("Y, Z, X _______________________________________")
+print(" _________________Z, X, Y______________________")
 
 total1 = 0
 for z in range(len(vendas[0][0])):
@@ -97,7 +100,7 @@ for z in range(len(vendas[0][0])):
     print(f"total2 = {total2}")
 print(f"total1 = {total1}")
 
-print("Z, X, Y _______________________________________")
+print(" __________________Z, Y, X_____________________")
 
 total1 = 0
 for z in range(len(vendas[0][0])):
@@ -111,5 +114,3 @@ for z in range(len(vendas[0][0])):
         print(f"total3 = {total3}")
     print(f"total2 = {total2}")
 print(f"total1 = {total1}")
-
-print("Z, Y, X _______________________________________")
