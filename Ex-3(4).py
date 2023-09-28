@@ -39,13 +39,11 @@ casa = 0
 maior = 0
 x = y = z = 0
 
-
 # Total
 
 total1 = 0
 for x in range(len(vendas)):
     for y in range(len(vendas[x])):
-        total2 = 0
         for z in range(len(vendas[x][y])):
             total1 += vendas[x][y][z]
 print(f"Total de vendas = {total1}")
