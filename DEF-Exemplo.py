@@ -15,4 +15,3 @@ print("Lista ordenada de forma decrescente:", lista_ordenada_decrescente)
 
 # Retorna à ordem original
 print("Lista original:", lista_original)
-
