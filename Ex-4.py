@@ -22,37 +22,51 @@ salario_extra1 = 0
 salario_extra2 = 0
 salario_vendas = 0
 
-if horas <= 40:
-    salario1 = salario * horas
-elif 41 <= horas <= 60:
-    salario_extra1 = (horas - 40) * (salario * 1.5)
-    salario1 = (salario * 40) + salario_extra1
-elif horas >= 61:
-    salario_extra2 = (20 * (salario * 1.5)) + ((horas - 60) * (salario * 2))
-    salario1 = (salario * 40) + salario_extra2
 
+def calcular_salario(n1, n2):
+    global salario1
+    if n2 <= 40:
+        salario1 = n1 * n2
+    elif 41 <= n2 <= 60:
+        salario_extra1 = (n2 - 40) * (n1 * 1.5)
+        salario1 = (n1 * 40) + salario_extra1
+    elif n2 >= 61:
+        salario_extra2 = (20 * (n1 * 1.5)) + ((n2 - 60) * (n1 * 2))
+        salario1 = (n1 * 40) + salario_extra2
+
+    return salario1
+
+
+calcular_salario(salario, horas)
 print(f"Salario sem vendas = {salario1}")
 
-if vendas <= 10000:
-    vendas_extra = vendas * 0.01
-    salario_vendas = salario1 + vendas_extra
-elif 10000 <= vendas <= 20000:
-    vendas_extra = ((vendas - 10000) * 0.02) + 10000 * 0.01
-    salario_vendas = salario1 + vendas_extra
-elif 20000 <= vendas <= 30000:
-    vendas_extra = ((vendas - 20000) * 0.03) + 10000 * 0.02 + 10000 * 0.01
-    salario_vendas = salario1 + vendas_extra
-elif 30000 <= vendas <= 40000:
-    vendas_extra = ((vendas - 30000) * 0.04) + 10000 * 0.03 + 10000 * 0.02 + 10000 * 0.01
-    salario_vendas = salario1 + vendas_extra
-elif 40000 <= vendas:
-    vendas_extra = ((vendas - 40000) * 0.05) + 10000 * 0.04 + 10000 * 0.03 + 10000 * 0.02 + 10000 * 0.01
-    salario_vendas = salario1 + vendas_extra
 
+def calcular_vendas(n1, n2):
+    global salario_vendas
+    if n2 <= 10000:
+        vendas_extra = n2 * 0.01
+        salario_vendas = n1 + vendas_extra
+    elif 10000 <= n2 <= 20000:
+        vendas_extra = ((n2 - 10000) * 0.02) + 10000 * 0.01
+        salario_vendas = n1 + vendas_extra
+    elif 20000 <= n2 <= 30000:
+        vendas_extra = ((n2 - 20000) * 0.03) + 10000 * 0.02 + 10000 * 0.01
+        salario_vendas = n1 + vendas_extra
+    elif 30000 <= n2 <= 40000:
+        vendas_extra = ((n2 - 30000) * 0.04) + 10000 * 0.03 + 10000 * 0.02 + 10000 * 0.01
+        salario_vendas = n1 + vendas_extra
+    elif 40000 <= n2:
+        vendas_extra = ((n2 - 40000) * 0.05) + 10000 * 0.04 + 10000 * 0.03 + 10000 * 0.02 + 10000 * 0.01
+        salario_vendas = n1 + vendas_extra
+
+    return salario_vendas
+
+
+calcular_vendas(salario1, vendas)
 print(f"Salario com as vendas = {salario_vendas}")
 
-desconto =(salario_vendas * 0.11)
+desconto = (salario_vendas * 0.11)
 print(f"Desconto para a Segurança Social = {desconto}")
 
 liquido = salario_vendas - desconto
-print(f"Total = {liquido}")
+print(f"Total liquido = {liquido}")
