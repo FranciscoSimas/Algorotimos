@@ -1,4 +1,4 @@
-# Soluçaõ professor
+# Soluçaõ professor(apenas mudar a lista)
 
 def calc_seg_social(salario):
     tabela = [
