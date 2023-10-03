@@ -18,4 +18,4 @@ for n in numero:
 print("Resultado:", n_impares)
 
 
-# 1 3 7 8 10 13 14 17 19 20
+# 1 3 7 8* 10 13 14 17 19 20
